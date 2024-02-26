@@ -4,9 +4,8 @@ const app = getApp()
 let loadingCount = 0
 
 module.exports = {
-  Xrequest: (url, method, data, showLoading = true) => {
+  Xrequest :(url, method, data, showLoading = true) => {
     let _url = `${env.baseUrl}${url}`
-    console.log(_url)
     let tokenData = {}
     if (app && app.globalData.token) {
       tokenData = {
@@ -25,52 +24,38 @@ module.exports = {
       }
       loadingCount++
       wx.request({
-        url: '_url',
+        url: _url,
         data: {
           ...data
         },
-        // dataType: dataType,
-        enableCache: true,
-        enableChunked: true,
-        enableHttp2: true,
-        enableHttpDNS: true,
-        enableQuic: true,
-        forceCellularNetwork: true,
         header: {
           'content-type': 'application/json',
           ...tokenData
         },
-        httpDNSServiceId: 'httpDNSServiceId',
         method: method || 'GET',
-        // responseType: responseType,
         timeout: 1000,
         success: (res) => {
           let {
             code
-          } = result.data
+          } = res.data
           if (code === 200) {
-            if (res.data.data && res.data.data.errorMsg) {
+            if (res.data && res.data.errorMsg) {
               wx.showToast({
-                title: res.data.data.errorMsg,
+                title: res.data.errorMsg,
                 icon: "none",
                 duration: 3000
               })
               return
             }
-            resolve(res.data.data);
+            resolve(res);
           } else {
-            reject(res.data)
-            // wx.showToast({
-            //   icon:"error",
-            //   title: '数据请求错误',
-            // })
+            reject(res)
           }
         },
         fail: (err) => {
           reject("接口有错误，请检查接口")
         },
         complete: (res) => {
-          console.log(res)
           if (loadingCount > 0) {
             loadingCount--;
           }
@@ -79,9 +64,9 @@ module.exports = {
           }
           if (res.data) {
             if (res.data.code === 200) {
-              if (res.data.data && res.data.data.errorMsg) {
+              if (res.data && res.data.errorMsg) {
                 wx.showToast({
-                  title: res.data.data.errorMsg,
+                  title: res.data.errorMsg,
                   icon: "none",
                   duration: 3000
                 })
@@ -110,7 +95,7 @@ module.exports = {
               icon: "none",
               duration: 3000
             })
-            reject(res.data)
+            reject(res)
           }
 
         },

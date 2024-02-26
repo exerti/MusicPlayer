@@ -1,0 +1,16 @@
+<view class='swiper'>
+	<swiper indicator-dots="{{indicatorDots}}" 
+  autoplay="{{autoplay}}" 
+  interval="{{interval}}"
+   duration="{{duration}}" 
+   circular="{{circular}}" 
+   previous-margin="20px" 
+   next-margin="20px">
+		<block wx:for="{{banners}}" wx:key="id">
+			<swiper-item catchtap="onBannerItemClick" data-id='{{item._id}}'>
+				<image src="{{item.imageUrl}}" class="slide-image" bindload="imgInfo" style="width: {{imgWidth}}px; height: {{imgHeight}}px;"/>
+				<text class='slide-text' wx:if="{{showTitle}}">{{ item.title }}</text>
+			</swiper-item>
+		</block>
+	</swiper>
+</view>

@@ -1,0 +1,11 @@
+/* components/videoList/index.wxss */
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.videoList{
+  width: 47%;
+}

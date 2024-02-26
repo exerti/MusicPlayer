@@ -1,6 +1,7 @@
 <!--pages/main-video/video.wxml-->
 <text>pages/main-video/video.wxml</text>
-
-<view>
-  text
-</view>
+<videoList videoList="{{videoList}}">
+</videoList>
+ <view wx:if="{{hasmore}}"> 
+  <text>没有更多了</text>
+ </view>

@@ -1,4 +1,8 @@
 {
   "navigationBarTitleText": "推荐视频",
-  "usingComponents": {}
+  "usingComponents": {
+    "banner":"../../components/banner/index",
+    "videoList":"../../components/videoList"
+  },
+  "enablePullDownRefresh": true
 }

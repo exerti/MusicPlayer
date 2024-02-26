@@ -1,0 +1,4 @@
+<!--pages/detail-video/detail-video.wxml-->
+<video class="video" src="{{videoUrl.url}}"  
+autoplay="false"
+object-fit="fill"/>
