@@ -1,21 +1,45 @@
-<!--pages/detail-search/detail-search.wxml-->
-<van-search class="search" value="{{ value }}" input-align="center" use-action-slot placeholder="请输入搜索关键词" bind:change="onChange">
-  <view slot="action" bind:tap="onClick" class="btn">搜索</view>
-</van-search>
+<van-search  value="{{ inputValue }}" maxlength="15" placeholder="请输入搜索关键词"  focus="true"show-action bind:search="onSearch" bind:cancel="onCancel" bind:change="onChange" />
 
-<!-- <view class="Mysearch">
-  <view class="header">
-    <view class="title"> 搜索历史</view>
-    <view class="clear">清空历史</view>
-  </view>
-  <view class="content"></view>
-</view> -->
-<view class="Hotsearch">
-  <view class="title"> 热门搜索</view>
-  <view class="content">
-   <block wx:for="{{HotSearch}}" wx:key="{{item}}">
-    <van-tag plain size="large" type="primary">{{item.first}}</van-tag>
-    </block>
-   
-  </view>
+<view class='{{isShowResultView?"normalBgView-hidden":"normalBgView"}}'>
+	<view class="hotSearchBgView">
+		<view class="hotSearchTitleView">
+			<view class="hotSearchTitle">热门搜索</view>
+			<van-icon name="delete-o" class="hotSearchCleanBtn  .fid " bindtap='CleanHotSearch' />
+		</view>
+		<view class="hotSearchTagBgView">
+			<view class="hotSearchTag" wx:for="{{HotSearch}}" wx:key="index" bind:tap="ClickHotSearchItem" data-text='{{item.first}}'>{{item.first}}</view>
+		</view>
+	</view>
+	<!-- <view class="historyBgView">
+		<view class="historyTitleView">
+			<view class="historyTitle">搜索历史</view>
+			<van-icon name="delete" class="historyCleanBtn" bindtap='CleanHistory' />
+		</view>
+		<view class="historyTagBgView">
+			<view class="historyTag" wx:for="{{searchHistoryArr}}" wx:key="index" bindtap='ClickHistoryItem' data-text='{{item}}'>
+				<van-icon class="historyIconLeft" name="clock-o" color="#969696" size="20px" />
+				<view class="historyText"> {{item}}</view>
+				<van-icon class="historyIconRight" name="cross" color="#969696" size="20px" catchtap='CleanHistoryItem' data-text='{{item}}' />
+			</view>
+		</view> -->
+
+    <view class="hotSearchBgView">
+		<view class="hotSearchTitleView">
+			<view class="hotSearchTitle">搜索历史</view>
+			<van-icon name="delete-o" class="hotSearchCleanBtn" bindtap='CleanHotSearch' />
+		</view>
+		<view class="hotSearchTagBgView">
+			<view class="hotSearchTag" wx:for="{{historyItems}}" wx:key="index" bindtap='ClickHotSearchItem' data-text='{{item}}'>{{item}}</view>
+		</view>
+	</view>
+	
 </view>
+
+<view class='{{isShowResultView?"resultBgView":"resultBgView-hidden"}}'>
+	<view class="resultCell" wx:for="{{searchResult}}" wx:key="index" bindtap='ClickResultItem' data-item='{{item}}'>
+		<van-icon name="search" color="#969696" size="20px" />
+		<view class="resultText"> {{searchResult[index].name}}</view>
+	</view>
+</view>
+
+

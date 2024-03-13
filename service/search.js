@@ -5,3 +5,12 @@ export function getHotSearch(){
       '/search/hot','GET'
     )
 }
+
+
+export function search(keywords){
+  return  Xrequest(
+    '/search','get',{
+      keywords
+    }
+  )
+}

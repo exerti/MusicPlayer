@@ -2,7 +2,8 @@
   "usingComponents": {
     "van-search": "@vant/weapp/search/index",
     "areaHeader":"/components/areaHeader/areaHeader",
-    "van-tag": "@vant/weapp/tag/index"
+    "van-tag": "@vant/weapp/tag/index",
+    "van-icon": "@vant/weapp/icon/index"
   },
   "navigationBarTitleText": "搜索"
 
