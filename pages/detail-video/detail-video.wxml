@@ -1,4 +1,19 @@
 <!--pages/detail-video/detail-video.wxml-->
-<video class="video" src="{{videoUrl.url}}"  
-autoplay="false"
-object-fit="fill"/>
+<wxs src="/utils/format.wxs" module="format"></wxs>
+<video class="video" src="{{videoUrl.url}}" autoplay="false" object-fit="fill" referrer-policy="origin" />
+<scroll-view class="content" scroll-y="true">
+
+  <view class="info">
+    <view class="title">{{ videoInfo.name }}</view>
+    <view class="desc">{{ videoInfo.artistName }} - {{ videoInfo.alias[0] }}</view>
+    <view class="other">
+      <text class="play-count">{{format.formatCount(videoInfo.playCount)}}次播放 - </text>
+      <text class="publish-time">{{videoInfo.publishTime}}</text>
+    </view>
+  </view>
+  <view class="relatedMv">
+    <block wx:for="{{videoRealted}}" wx:key="item">
+      <videoItem video="{{item}}"></videoItem>
+    </block>
+  </view>
+</scroll-view>

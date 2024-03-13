@@ -9,7 +9,8 @@ module.exports = {
     let tokenData = {}
     if (app && app.globalData.token) {
       tokenData = {
-        Authorization: app.globalData.token
+        Authorization: app.globalData.token,
+        withCredentials :true
       }
     }
     return new Promise((resolve, reject) => {

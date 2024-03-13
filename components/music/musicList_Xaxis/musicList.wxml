@@ -1,0 +1,7 @@
+<!--components/music/musicList_Xaxis/musicList.wxml-->
+<scroll-view 	scroll-x="true"
+              enable-passive="true">
+  <view class="list">
+  <musicItem wx:for="{{dataList}}"  item="{{item}}"></musicItem>
+</view>
+</scroll-view>

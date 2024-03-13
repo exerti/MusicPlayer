@@ -1,66 +1,59 @@
 // pages/main-music/music.js
+import {getBanners ,getPlayListDetail , getTopPlayList} from "../../service/music"
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-      bannerList:[]
+      bannerList:[],
+      value: '',
+      playMusicListDetail:[],
+      HotList:[]
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
-
+  onChange(e) {
+    this.setData({
+      value: e.detail,
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
+  onClick() {
+    wx.navigateTo({
+      url: '../detail-search/detail-search'
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
+  async  onLoad(){
+     await this.getBanner()
+     await this.getHotPalyListDetail()
+     await this.getHotListAll()
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
+  OnMoreClick(){
+     wx.navigateTo({
+       url: '/pages/more-musicPlayList/morePlaylist',
+     })
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
+  getBanner(){
+    getBanners().then(
+      res=>{
+        this.setData({
+          bannerList:res.data.banners
+        })
+      }
+     )
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
+  getHotPalyListDetail(){
+    getPlayListDetail(3778678).then(res=>{
+     this.setData({
+      playMusicListDetail:res.data.playlist
+     })
+    })
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
+  getHotListAll(){
+    getTopPlayList().then(res=>{
+      console.log(res)
+      this.setData({
+        HotList:res.data.playlists
+      })
+    })
   }
+  
 })

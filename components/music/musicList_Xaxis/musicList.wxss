@@ -1,0 +1,6 @@
+/* components/music/musicList_Xaxis/musicList.wxss */
+.list{
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0 10rpx;
+}

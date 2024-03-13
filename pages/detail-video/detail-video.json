@@ -1,4 +1,7 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "videoItem" :"/components/video/videoItem-2/videoItem-2"
+  },
   "navigationBarTitleText": "视频详情"
+  
 }

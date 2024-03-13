@@ -1,0 +1,25 @@
+/* pages/detail-search/detail-search.wxss */
+
+
+.btn{
+  padding-right: 10rpx;
+}
+.title{
+  line-height: normal;
+  font-weight: 700;
+  font-size: 26rpx;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+}
+.header .clear{
+   font-size: small;
+}
+.content{
+  /* display: flex; */
+    height: 500rpx;
+    width: 100%;
+    overflow: hidden;
+   
+}

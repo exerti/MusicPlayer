@@ -1,1 +1,10 @@
 /* pages/main-music/music.wxss */
+page{
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  background-color: #fafafa;
+}
+.banner{
+  border-radius:  36rpx;
+  overflow: hidden;
+}

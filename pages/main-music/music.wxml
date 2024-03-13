@@ -1,2 +1,33 @@
 <!--pages/main-music/music.wxml-->
-<text>pages/main-music/music.wxml</text>
+<view>
+  <van-search value="{{ value }}" placeholder="请输入搜索关键词" use-action-slot background="#fafafa" bind:change="onChange" bind:click-input="onClick">
+</van-search>
+
+<banner banners="{{bannerList}}" class="banner"></banner>
+
+    <view class="miic">
+      
+    </view>
+
+<!-- <view class="HotList">
+  <areaHeader bind:moreClick="OnMoreClick">
+    热门歌单
+  </areaHeader>
+  <musicList dataList="{{HotList}}"></musicList>
+</view>
+
+<view>
+  <areaHeader bind:moreClick="OnMoreClick">
+  每日推荐
+</areaHeader>
+<musicList dataList="{{HotList}}"></musicList>
+
+</view> -->
+
+<view>
+  <areaHeader hasMore="{{false}}">
+  巅峰榜
+</areaHeader>
+<musicList dataList="{{HotList}}"></musicList>
+</view>
+</view>

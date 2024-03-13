@@ -2,7 +2,12 @@
   "pages": [
     "pages/main-music/music",
     "pages/main-video/video",
-    "pages/detail-video/detail-video"
+    "pages/detail-video/detail-video",
+    "pages/home/home",
+    "pages/detail-search/detail-search",
+    "pages/music-player/music-player",
+    "pages/more-musicPlayList/morePlaylist",
+    "pages/detail-musicList/detail-musicList"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -11,6 +16,12 @@
   },
   "tabBar": {
     "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "./assets/images/tabbar/home.png",
+        "text": "首页",
+        "selectedIconPath": "./assets/images/tabbar/home_1.png"
+      },
       {
         "pagePath": "pages/main-music/music",
         "iconPath": "assets/images/tabbar/music_normal.png",
@@ -25,7 +36,6 @@
       }
     ]
   },
-  "style": "v2",
   "componentFramework": "glass-easel",
   "sitemapLocation": "sitemap.json",
   "lazyCodeLoading": "requiredComponents"

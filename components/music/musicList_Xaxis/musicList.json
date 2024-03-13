@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "musicItem":"/components/music/songItem2/songItem2"
+  }
+}

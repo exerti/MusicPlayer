@@ -1,0 +1,55 @@
+/* components/video-list-item2/index.wxss */
+.item {
+  display: flex;
+  align-items: center;
+  margin-top: 30rpx;
+}
+
+.album {
+  width: 230rpx;
+  position: relative;
+  display: flex;
+}
+
+.image {
+  width: 100%;
+  border-radius: 10rpx;
+}
+
+.info {
+  display: flex;
+  position: absolute;
+  bottom: 6rpx;
+  right: 10rpx;
+  color: #fff;
+  font-size: 24rpx;
+}
+
+.info .count {
+  padding-left: 36rpx;
+}
+
+.info .count::before {
+  content: "";
+  position: absolute;
+  left: -2rpx;
+  top: 4rpx;
+  width: 30rpx;
+  height: 24rpx;
+  background-size: cover;
+  /* background-image: url(/assets/images/player/play\ circle.png) */
+}
+
+.content {
+  flex: 1;
+  padding: 0 20rpx;
+}
+
+.content .title {
+  font-size: 28rpx;
+}
+
+.content .nickname {
+  font-size: 24rpx;
+  color: #555;
+}

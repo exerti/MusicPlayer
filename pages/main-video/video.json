@@ -2,7 +2,8 @@
   "navigationBarTitleText": "推荐视频",
   "usingComponents": {
     "banner":"../../components/banner/index",
-    "videoList":"../../components/videoList"
+    "videoList":"/components/video/videoList/index",
+    "van-divider": "@vant/weapp/divider/index"
   },
   "enablePullDownRefresh": true
 }

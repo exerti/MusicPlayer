@@ -1,6 +1,10 @@
 /* components/bannner/index.wxss */
 /* swiper 宽度 / swiper 高度 = 原图宽度 / 原图高度 */
-swiper{
+.swiper{
   width: 100%;
- height: cacl( 100vw * 300/800);
+  height: cacl( 100vw * 346/891);
+}
+.slide-image{
+  width: 100%;
+  border-radius: 8rpx;
 }

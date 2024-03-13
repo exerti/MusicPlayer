@@ -1,0 +1,8 @@
+<!--pages/detail-musicList/detail-musicList.wxml-->
+<view>
+  <view class="header">
+    歌单名
+  </view>
+  <view>歌曲列表</view>
+  <view>评论</view>
+</view>

@@ -1,8 +1,0 @@
-<!--components/videoList/index.wxml-->
-
- <view class="container">
-  <videoItem class="videoList" wx:for="{{videoList}}"
-     wx:key="id"
-      video="{{item}}">
-   </videoItem>
- </view>

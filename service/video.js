@@ -31,12 +31,12 @@ export function getMVInfo(mvid) {
   )
 }
 
-export function getMVRelated(id) {
+export function getMVRelated(mvid) {
   return Xrequest(
-    "/related/allvideo",
+    "/simi/mv",
     'GET',
     {
-      id
+      mvid
     }
   )
 }
