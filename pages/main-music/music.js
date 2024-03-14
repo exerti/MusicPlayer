@@ -1,5 +1,5 @@
 // pages/main-music/music.js
-import {getBanners ,getPlayListDetail , getTopPlayList} from "../../service/music"
+import {getBanners ,getPlayListDetail , getTopPlayList,recommendSong ,topList} from "../../service/music"
 Page({
 
   /**
@@ -9,7 +9,9 @@ Page({
       bannerList:[],
       value: '',
       playMusicListDetail:[],
-      HotList:[]
+      HotList:[],
+      dailySongs:[],
+      topList:[]
   },
   onChange(e) {
     this.setData({
@@ -25,6 +27,8 @@ Page({
      await this.getBanner()
      await this.getHotPalyListDetail()
      await this.getHotListAll()
+     await this.getDailyRecommend()
+     await this.getTopList()
   },
   OnMoreClick(){
      wx.navigateTo({
@@ -49,11 +53,24 @@ Page({
   },
   getHotListAll(){
     getTopPlayList().then(res=>{
-      console.log(res)
       this.setData({
         HotList:res.data.playlists
       })
     })
+  },
+  getDailyRecommend(){
+    recommendSong().then(res=>{
+      console.log(res)
+      let {dailySongs,recommendReasons} = res.data.data
+      this.setData({
+        dailySongs:dailySongs
+      })
+    })
+  },
+  getTopList(){
+    topList().then(res=>{
+       console.log(res)
+       let {list } = res.data
+    })
   }
-  
 })

@@ -8,3 +8,6 @@ page{
   border-radius:  36rpx;
   overflow: hidden;
 }
+.recommend_content{
+  height: 600rpx;
+}

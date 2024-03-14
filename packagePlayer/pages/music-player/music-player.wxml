@@ -2,10 +2,10 @@
 <wxs src="/utils/format.wxs" module="fmt"></wxs>
 
 <!-- 1.背景展示 -->
-<image class="bg-image" src="{{currentSong.al.picUrl}}" mode="aspectFill"></image>
+<image class="bg-image" src="{{songDetail.al.picUrl}}" mode="aspectFill"></image>
 <view class="bg-cover"></view>
 
-<!-- 2.自定义导航栏 -->
+<!-- 2.自定义导航栏
 <nav-bar bind:leftclick="onNavBackTap">
   <view class="tabs" slot="center">
     <block wx:for="{{pageTitles}}" wx:key="*this">
@@ -18,21 +18,21 @@
       <view class="divider" wx:if="{{index !== pageTitles.length - 1}}">|</view>
     </block>
   </view>
-</nav-bar>
-
-<!-- 3.具体内容 -->
-<swiper 
+</nav-bar> -->
+<!-- 
+3.具体内容 -->
+<!-- <swiper 
   bindchange="onSwiperChange"
   style="height: {{contentHeight}}px;"
   current="{{currentPage}}"
 >
   <swiper-item class="music">
     <view class="album">
-      <image class="image" src="{{currentSong.al.picUrl}}" mode="widthFix"></image>
+      <image class="image" src="{{songDetail.al.picUrl}}" mode="widthFix"></image>
     </view>
     <view class="info">
-      <view class="name">{{currentSong.name}}</view>
-      <view class="singer">{{currentSong.ar[0].name}}</view>
+      <view class="name">{{songDetail.name}}</view>
+      <view class="singer">{{songDetail.ar[0].name}}</view>
     </view>
     <view class="lyric">
       {{currentLyricText}}
@@ -91,4 +91,6 @@
       </block>
     </scroll-view>
   </swiper-item>
-</swiper>
+</swiper> -->
+
+<view><audio  poster="{{songDetail.al.picUrl}}" src="{{songUrl.url}}" author="{{songDetail.ar[0].name}}" name="{{songDetail.name}}" controls="true"></audio></view>

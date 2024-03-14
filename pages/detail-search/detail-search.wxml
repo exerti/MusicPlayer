@@ -38,7 +38,7 @@
 <view class='{{isShowResultView?"resultBgView":"resultBgView-hidden"}}'>
 	<view class="resultCell" wx:for="{{searchResult}}" wx:key="index" bindtap='ClickResultItem' data-item='{{item}}'>
 		<van-icon name="search" color="#969696" size="20px" />
-		<view class="resultText"> {{searchResult[index].name}}</view>
+		<view class="resultText"> {{searchResult[index].name}}--{{searchResult[index].artists[0].name}}</view>
 	</view>
 </view>
 

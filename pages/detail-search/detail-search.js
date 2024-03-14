@@ -100,7 +100,7 @@ Page({
     console.log(item)
 
     wx.navigateTo({
-      url: '/pages/music-player/music-player?id=${item.id}',
+      url: `/packagePlayer/pages/music-player/music-player?id=${item.id}`,
     })
   }
 

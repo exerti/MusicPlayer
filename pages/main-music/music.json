@@ -4,7 +4,8 @@
     "banner":"/components/banner",
     "areaHeader":"/components/areaHeader/areaHeader",
     "song":"/components/music/songItem/songItem",
-    "musicList":"/components/music/musicList_Xaxis/musicList"
+    "musicList":"/components/music/musicList_Xaxis/musicList",
+    "rankItem":"/components/rankItem/rankItem"
    
   }
 }

@@ -5,11 +5,14 @@
 
 <banner banners="{{bannerList}}" class="banner"></banner>
 
-    <view class="miic">
-      
+    <view class="recommend">
+        <areaHeader> 每日推荐</areaHeader>
+         <scroll-view  scroll-y="true" 	scroll-top="true" class="recommend_content">
+            <song wx:for="{{dailySongs}}" item="{{item}}" ></song>
+         </scroll-view>
     </view>
 
-<!-- <view class="HotList">
+<view class="HotList">
   <areaHeader bind:moreClick="OnMoreClick">
     热门歌单
   </areaHeader>
@@ -18,16 +21,14 @@
 
 <view>
   <areaHeader bind:moreClick="OnMoreClick">
-  每日推荐
-</areaHeader>
-<musicList dataList="{{HotList}}"></musicList>
-
-</view> -->
-
-<view>
-  <areaHeader hasMore="{{false}}">
   巅峰榜
 </areaHeader>
-<musicList dataList="{{HotList}}"></musicList>
+<view class="ranking-list">
+    <block wx:for="{{rankingInfos}}" wx:key="id">
+      <ranking-item itemData="{{item}}" key="{{index}}"/>
+    </block>
+  </view>
 </view>
+
+
 </view>

@@ -31,3 +31,23 @@ export function getTopPlayList(limit= 10 ,offset = 1){
 export  function getSongeMenuLsit(){
     return Xrequest('')
 }
+
+export function recommendSong(){
+   return Xrequest('/recommend/songs' , 'GET')
+}
+
+export function topList(){
+  return Xrequest('/toplist','GET')
+}
+
+export function getSongDetail(SongID){
+  return  Xrequest('/song/detail','PUT',{
+    ids:SongID
+  })
+}
+export function getSongUrl(SongID){
+  return Xrequest('/song/url/v1', 'PUT' , {
+    id:SongID,
+    level:"exhigh"
+  })
+}

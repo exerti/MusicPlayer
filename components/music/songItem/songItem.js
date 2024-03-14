@@ -23,7 +23,10 @@ Component({
    */
   methods: {
     onItemClick(){
-    
+      let {id }= this.properties.item
+      wx.navigateTo({
+        url: `/packagePlayer/pages/music-player/music-player?id=${id}`,
+      })
     }
   }
 })
