@@ -6,13 +6,16 @@
 ## 实现的页面
 <<<<<<< HEAD
 
-![Alt Text]('./assets/perview/Snipaste_2024-03-22_13-21-49.png)
-![Alt Text]('./assets/perview/Snipaste_2024-03-22_13-22-42.png)
-![Alt Text]('./assets/perview/Snipaste_2024-03-22_13-23-01.png)
-![Alt Text]('./assets/perview/Snipaste_2024-03-22_13-23-16.png)
-![Alt Text]('./assets/perview/Snipaste_2024-03-22_13-23-31.png)
+
 
 
 =======
 ![image](https://github.com/exerti/MusicPlayer/assets/97137778/ad9227ca-144f-4bae-b6ac-6067c66087c0)
+![image](https://github.com/exerti/MusicPlayer/assets/97137778/50a0a54a-9111-4001-9664-fb86744edee4)
+
+![image](https://github.com/exerti/MusicPlayer/assets/97137778/26753d28-5f5c-4172-baa5-4453d1630738)
+![image](https://github.com/exerti/MusicPlayer/assets/97137778/d1f5f6b9-6e06-4cfb-9312-4cb9102dc3af)
+![image](https://github.com/exerti/MusicPlayer/assets/97137778/a1d585c3-9139-4c57-a95a-ac66b071fc81)
+![image](https://github.com/exerti/MusicPlayer/assets/97137778/6d152198-698e-4c06-bc65-ea5e4d4a5cc5)
+
 >>>>>>> 76114e2773d34d0b4a79bf35e2f9bfd470c42d86
